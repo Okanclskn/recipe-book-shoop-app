@@ -7,15 +7,14 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-  });
- constructor(){
+
+  
+ tempNavigate = true;
+ constructor(){}
+ onTempNavigation(event) {
+   console.log(event,"sadas")
+   this.tempNavigate = event
+
    
  }
- onSubmit() {
-  // TODO: Use EventEmitter with form value
-  console.warn(this.profileForm.value);
-}
 }

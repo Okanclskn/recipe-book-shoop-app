@@ -1,11 +1,11 @@
 <div class="container">
-  <app-header></app-header>
+  <app-header [tempNavigate]="tempNavigate" (tempNavigationEvent)=" onTempNavigation($event)"></app-header>
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
+      <app-recipes *ngIf="tempNavigate"></app-recipes>
     </div>
     <div class="col-md-12">
-      <app-shoppinglist></app-shoppinglist>
+      <app-shoppinglist *ngIf="tempNavigate === false"></app-shoppinglist>
     </div>
   </div>
 </div>
